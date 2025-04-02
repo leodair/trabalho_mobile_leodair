@@ -28,16 +28,16 @@ export default function HomeScreen() {
             {Platform.select({
               ios: 'cmd + d',
               android: 'cmd + m',
-              web: 'F12'
+              web: ''
             })}
           </ThemedText>{' '}
         </ThemedText>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-        <ThemedText>
-          Tap the Explore tab to learn more about what's included in this starter app.
-        </ThemedText>
+        <ThemedText type="title">Tipos de ansiedade</ThemedText>
+        <ThemedText type="subtitle"> Transtorno de Ansiedade Generalizada (TAG)</ThemedText>
+      <ThemedView type="defaultSemiBold">Caracteriza-se por preocupação excessiva e persistente sobre diversas áreas da vida (trabalho, saúde, relacionamentos) por pelo menos seis meses. Pode vir acompanhada de sintomas como fadiga, tensão muscular e dificuldade de concentração.
+      {''}</ThemedView>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
