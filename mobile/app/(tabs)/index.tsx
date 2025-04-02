@@ -8,7 +8,7 @@ import { ThemedView } from '@/components/ThemedView';
 export default function HomeScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
+      headerBackgroundColor={{ light: '#A1CEDC', dark: '#2345' }}
       headerImage={
         <Image
           source={require('@/assets/images/ansiedade.jpg')}
@@ -17,13 +17,16 @@ export default function HomeScreen() {
       }>
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Ansiedade</ThemedText>
-        <HelloWave />
+      
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Oque é Ansiedade</ThemedText>
         <ThemedText>
-           <ThemedText type="defaultSemiBold">A ansiedade é uma resposta natural do corpo a situações de estresse ou perigo. Ela pode se manifestar como uma sensação de preocupação, nervosismo ou medo, e é comum sentir ansiedade em momentos desafiadores, como antes de uma apresentação ou de um exame. No entanto, quando a ansiedade se torna excessiva ou persistente, pode interferir nas atividades diárias e se transformar em um transtorno de ansiedade, que pode exigir atenção e tratamento. Se você ou alguém que você conhece está enfrentando dificuldades com a ansiedade, é sempre bom buscar apoio profissional.</ThemedText> 
+           <ThemedText type="defaultSemiBold"></ThemedText> 
           {' '}
+          <ThemedText>
+          A ansiedade é uma resposta natural do corpo a situações de estresse ou perigo. Ela pode se manifestar como uma sensação de preocupação, nervosismo ou medo, e é comum sentir ansiedade em momentos desafiadores, como antes de uma apresentação ou de um exame. No entanto, quando a ansiedade se torna excessiva ou persistente, pode interferir nas atividades diárias e se transformar em um transtorno de ansiedade, que pode exigir atenção e tratamento. Se você ou alguém que você conhece está enfrentando dificuldades com a ansiedade, é sempre bom buscar apoio profissional.
+          </ThemedText>
           <ThemedText type="defaultSemiBold">
             {Platform.select({
               ios: 'cmd + d',
@@ -34,6 +37,7 @@ export default function HomeScreen() {
         </ThemedText>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
+<<<<<<< HEAD
         <ThemedText type="title">Tipos de ansiedade</ThemedText>
         <ThemedText type="subtitle"> Transtorno de Ansiedade Generalizada (TAG)</ThemedText>
       <ThemedView type="defaultSemiBold">Caracteriza-se por preocupação excessiva e persistente sobre diversas áreas da vida (trabalho, saúde, relacionamentos) por pelo menos seis meses. Pode vir acompanhada de sintomas como fadiga, tensão muscular e dificuldade de concentração.
@@ -41,12 +45,26 @@ export default function HomeScreen() {
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
+=======
+        <ThemedText type="subtitle">TIPOS DE ANSIEDADE</ThemedText>
         <ThemedText>
-          When you're ready, run{' '}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
+        Transtorno de Ansiedade Generalizada (TAG): Caracterizado por preocupação excessiva e estresse, que pode levar a fadiga, irritabilidade e tensão muscular 
+        </ThemedText>
+>>>>>>> a0be72cc1c081e77af204b5fb59c949adeebf886
+        <ThemedText>
+        Transtorno de Pânico (TP): Um tipo de ansiedade que pode causar crises de pânico 
+        </ThemedText>
+        <ThemedText>
+        Transtorno de Ansiedade Fóbico: Também conhecido como "fobia social", é um medo excessivo de situações sociais, como conversar com estranhos 
+        </ThemedText>
+        <ThemedText>
+        Agorafobia: Medo ou ansiedade de espaços que não são considerados seguros 
+        </ThemedText>
+        <ThemedText>
+        Transtorno de Estresse Pós-Traumático (TEPT): Crises de ansiedade relacionadas a flashbacks e pesadelos de eventos traumáticos 
+        </ThemedText>
+        <ThemedText>
+        Transtorno Obsessivo Compulsivo (TOC): Um tipo de ansiedade que pode causar obsessões e compulsões 
         </ThemedText>
       </ThemedView>
     </ParallaxScrollView>
