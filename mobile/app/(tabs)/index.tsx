@@ -37,20 +37,11 @@ export default function HomeScreen() {
         </ThemedText>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-<<<<<<< HEAD
-        <ThemedText type="title">Tipos de ansiedade</ThemedText>
-        <ThemedText type="subtitle"> Transtorno de Ansiedade Generalizada (TAG)</ThemedText>
-      <ThemedView type="defaultSemiBold">Caracteriza-se por preocupação excessiva e persistente sobre diversas áreas da vida (trabalho, saúde, relacionamentos) por pelo menos seis meses. Pode vir acompanhada de sintomas como fadiga, tensão muscular e dificuldade de concentração.
-      {''}</ThemedView>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-=======
         <ThemedText type="subtitle">TIPOS DE ANSIEDADE</ThemedText>
+        </ThemedView>
         <ThemedText>
         Transtorno de Ansiedade Generalizada (TAG): Caracterizado por preocupação excessiva e estresse, que pode levar a fadiga, irritabilidade e tensão muscular 
         </ThemedText>
->>>>>>> a0be72cc1c081e77af204b5fb59c949adeebf886
         <ThemedText>
         Transtorno de Pânico (TP): Um tipo de ansiedade que pode causar crises de pânico 
         </ThemedText>
@@ -66,7 +57,7 @@ export default function HomeScreen() {
         <ThemedText>
         Transtorno Obsessivo Compulsivo (TOC): Um tipo de ansiedade que pode causar obsessões e compulsões 
         </ThemedText>
-      </ThemedView>
+      
     </ParallaxScrollView>
   );
 }
