@@ -17,15 +17,15 @@ export default function HomeScreen() {
       }>
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Ansiedade</ThemedText>
-      
+
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Oque é Ansiedade</ThemedText>
         <ThemedText>
-           <ThemedText type="defaultSemiBold"></ThemedText> 
+          <ThemedText type="defaultSemiBold"></ThemedText>
           {' '}
           <ThemedText>
-          A ansiedade é uma resposta natural do corpo a situações de estresse ou perigo. Ela pode se manifestar como uma sensação de preocupação, nervosismo ou medo, e é comum sentir ansiedade em momentos desafiadores, como antes de uma apresentação ou de um exame. No entanto, quando a ansiedade se torna excessiva ou persistente, pode interferir nas atividades diárias e se transformar em um transtorno de ansiedade, que pode exigir atenção e tratamento. Se você ou alguém que você conhece está enfrentando dificuldades com a ansiedade, é sempre bom buscar apoio profissional.
+            A ansiedade é uma resposta natural do corpo a situações de estresse ou perigo. Ela pode se manifestar como uma sensação de preocupação, nervosismo ou medo, e é comum sentir ansiedade em momentos desafiadores, como antes de uma apresentação ou de um exame. No entanto, quando a ansiedade se torna excessiva ou persistente, pode interferir nas atividades diárias e se transformar em um transtorno de ansiedade, que pode exigir atenção e tratamento. Se você ou alguém que você conhece está enfrentando dificuldades com a ansiedade, é sempre bom buscar apoio profissional.
           </ThemedText>
           <ThemedText type="defaultSemiBold">
             {Platform.select({
@@ -38,26 +38,26 @@ export default function HomeScreen() {
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">TIPOS DE ANSIEDADE</ThemedText>
-        </ThemedView>
-        <ThemedText>
-        Transtorno de Ansiedade Generalizada (TAG): Caracterizado por preocupação excessiva e estresse, que pode levar a fadiga, irritabilidade e tensão muscular 
-        </ThemedText>
-        <ThemedText>
-        Transtorno de Pânico (TP): Um tipo de ansiedade que pode causar crises de pânico 
-        </ThemedText>
-        <ThemedText>
-        Transtorno de Ansiedade Fóbico: Também conhecido como "fobia social", é um medo excessivo de situações sociais, como conversar com estranhos 
-        </ThemedText>
-        <ThemedText>
-        Agorafobia: Medo ou ansiedade de espaços que não são considerados seguros 
-        </ThemedText>
-        <ThemedText>
-        Transtorno de Estresse Pós-Traumático (TEPT): Crises de ansiedade relacionadas a flashbacks e pesadelos de eventos traumáticos 
-        </ThemedText>
-        <ThemedText>
-        Transtorno Obsessivo Compulsivo (TOC): Um tipo de ansiedade que pode causar obsessões e compulsões 
-        </ThemedText>
-      
+      </ThemedView>
+      <ThemedText>
+        Transtorno de Ansiedade Generalizada (TAG): Caracterizado por preocupação excessiva e estresse, que pode levar a fadiga, irritabilidade e tensão muscular
+      </ThemedText>
+      <ThemedText>
+        Transtorno de Pânico (TP): Um tipo de ansiedade que pode causar crises de pânico
+      </ThemedText>
+      <ThemedText>
+        Transtorno de Ansiedade Fóbico: Também conhecido como "fobia social", é um medo excessivo de situações sociais, como conversar com estranhos
+      </ThemedText>
+      <ThemedText>
+        Agorafobia: Medo ou ansiedade de espaços que não são considerados seguros
+      </ThemedText>
+      <ThemedText>
+        Transtorno de Estresse Pós-Traumático (TEPT): Crises de ansiedade relacionadas a flashbacks e pesadelos de eventos traumáticos
+      </ThemedText>
+      <ThemedText>
+        Transtorno Obsessivo Compulsivo (TOC): Um tipo de ansiedade que pode causar obsessões e compulsões
+      </ThemedText>
+
     </ParallaxScrollView>
   );
 }
