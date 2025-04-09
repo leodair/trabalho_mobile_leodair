@@ -16,7 +16,7 @@ export default function HomeScreen() {
       headerBackgroundColor={{ light: '#A1CEDC', dark: '#2345' }}
       headerImage={
         <Image
-          source={require('@/assets/images/ansiedade.jpg')}
+          source={require('@/assets/images/ansiedade-vs-transtorno-1-1024x1024.jpg')}
           style={styles.reactLogo}
         />
       }>

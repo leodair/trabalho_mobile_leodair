@@ -10,15 +10,15 @@ import { IconSymbol } from '@/components/ui/IconSymbol';
 export default function TabTwoScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
+      headerBackgroundColor={{  light: '#A1CEDC', dark: '#2345' }}
       headerImage={
-        <IconSymbol
-          size={310}
-          color="#808080"
-          name="chevron.left.forwardslash.chevron.right"
+        <Image
+          source={require('@/assets/images/19.jpg')}
           style={styles.headerImage}
         />
       }>
+       
+     
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Perigos da Ansiedade</ThemedText>
       </ThemedView>
@@ -36,7 +36,10 @@ export default function TabTwoScreen() {
         <li>Náuseas e diarreia</li>
         <li>Problemas digestivos</li>
       </ThemedText>
-
+      <Image
+          source={require('@/assets/images/ansiedade-vs-transtorno-1-1024x1024.jpg')}
+          style={styles.headerImage}
+        />
 
     </ParallaxScrollView>
   );
@@ -44,9 +47,10 @@ export default function TabTwoScreen() {
 
 const styles = StyleSheet.create({
   headerImage: {
-    color: '#ffff',
-    bottom: -90,
-    left: -35,
+    height: 250,
+    width: 400,
+    bottom: 0,
+    left: 0,
     position: 'absolute',
   },
   titleContainer: {
