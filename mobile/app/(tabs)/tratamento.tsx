@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Platform, Button } from 'react-native';
+import { Image, StyleSheet, Platform, TouchableOpacity, Text, Linking } from 'react-native';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
@@ -6,9 +6,9 @@ import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 
 export default function HomeScreen() {
-  // Função para o botão
+  // Função para abrir o link externo
   const handleButtonPress = () => {
-    console.log("Botão pressionado!");
+    Linking.openURL('https://www.minhavida.com.br/saude/temas/ansiedade');
   };
 
   return (
@@ -20,22 +20,21 @@ export default function HomeScreen() {
           style={styles.reactLogo}
         />
       }>
+      
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Como tratar a Ansiedade</ThemedText>
       </ThemedView>
      
-        <ThemedText>
-          <ThemedText type="defaultSemiBold"></ThemedText>
-          {' '}
-          A ansiedade é uma resposta natural do corpo a situações de estresse ou perigo...
-        </ThemedText>
-    
-      
-      {/* Botão adicionado abaixo do conteúdo */}
-      <ThemedView style={styles.buttonContainer}>
-        <Button title="Clique aqui para saber mais" onPress={handleButtonPress} />
-      </ThemedView>
+      <ThemedText>
+        A ansiedade é uma resposta natural do corpo a situações de estresse ou perigo...
+      </ThemedText>
 
+      <ThemedView style={styles.buttonContainer}>
+        <TouchableOpacity style={styles.customButton} onPress={handleButtonPress}>
+          <Text style={styles.buttonText}>Clique aqui para saber mais</Text>
+        </TouchableOpacity>
+      </ThemedView>
+      
     </ParallaxScrollView>
   );
 }
@@ -61,5 +60,23 @@ const styles = StyleSheet.create({
     marginTop: 20,
     marginBottom: 20,
     paddingHorizontal: 20,
+    alignItems: 'center',
+  },
+  customButton: {
+    backgroundColor: '#007AFF', 
+    paddingVertical: 12,
+    paddingHorizontal: 50,
+    borderRadius: 10,
+    alignItems: 'center',
+    
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 4,
+    elevation: 5,
+  },
+  buttonText: {
+    color: '#fff',
+    fontWeight: '600',
+    fontSize: 16,
   },
 });

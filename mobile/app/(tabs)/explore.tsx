@@ -48,13 +48,13 @@ export default function TabTwoScreen() {
 const styles = StyleSheet.create({
   headerImage: {
     height: 250,
-    width: 400,
+    width: 500,
     bottom: 0,
     left: 0,
-    position: 'absolute',
+    
   },
   titleContainer: {
     flexDirection: 'row',
-    gap: 8,
+    gap:10,
   },
 });
