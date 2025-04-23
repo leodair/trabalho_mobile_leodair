@@ -6,7 +6,7 @@ import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 
 export default function HomeScreen() {
-  // Função para abrir o link externo
+
   const handleButtonPress = () => {
     Linking.openURL('https://www.minhavida.com.br/saude/temas/ansiedade');
   };
@@ -20,11 +20,11 @@ export default function HomeScreen() {
           style={styles.reactLogo}
         />
       }>
-      
+
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Como tratar a Ansiedade</ThemedText>
       </ThemedView>
-     
+
       <ThemedText>
         A ansiedade é uma resposta natural do corpo a situações de estresse ou perigo...
       </ThemedText>
@@ -34,7 +34,7 @@ export default function HomeScreen() {
           <Text style={styles.buttonText}>Clique aqui para saber mais</Text>
         </TouchableOpacity>
       </ThemedView>
-      
+
     </ParallaxScrollView>
   );
 }
@@ -50,8 +50,8 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   reactLogo: {
-    height: 250,
-    width: 400,
+    height: 300,
+    width: 340,
     bottom: 0,
     left: 0,
     position: 'absolute',
@@ -63,12 +63,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   customButton: {
-    backgroundColor: '#007AFF', 
+    backgroundColor: '#007AFF',
     paddingVertical: 12,
     paddingHorizontal: 50,
     borderRadius: 10,
     alignItems: 'center',
-    
+
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
     shadowRadius: 4,
