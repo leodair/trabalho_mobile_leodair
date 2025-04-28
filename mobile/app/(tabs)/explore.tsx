@@ -18,6 +18,9 @@ export default function TabTwoScreen() {
       <ScrollView>
         <View style={[styles.header, { backgroundColor: headerBackgroundColor }]}>
           <Image source={require('@/assets/images/19.jpg')} style={styles.headerImage} />
+          <View style={styles.buttonContainer}>
+            <Button title={`Modo ${theme === 'light' ? 'Escuro' : 'Claro'}`} onPress={toggleTheme} />
+          </View>
         </View>
 
         <View style={styles.contentContainer}>
@@ -43,11 +46,6 @@ export default function TabTwoScreen() {
             <Text>• Náuseas e diarreia{'\n'}</Text>
             <Text>• Problemas digestivos{'\n'}</Text>
           </Text>
-
-         
-          <View style={styles.buttonContainer}>
-            <Button title={`Alternar para Modo ${theme === 'light' ? 'Escuro' : 'Claro'}`} onPress={toggleTheme} />
-          </View>
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -74,6 +72,7 @@ const styles = StyleSheet.create({
     width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
+    position: 'relative', // Adicionado para o posicionamento absoluto do botão
   },
   headerImage: {
     height: 250,
@@ -93,7 +92,9 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   buttonContainer: {
-    marginTop: 20,
-    paddingHorizontal: 20,
+    position: 'absolute', // Para posicionar o botão
+    top: 10, // Distância do topo
+    right: 10, // Distância da direita
+    zIndex: 1, // Para garantir que o botão fique acima de outros elementos
   },
-});
+})
