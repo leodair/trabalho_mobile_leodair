@@ -8,7 +8,7 @@ import TabBarBackground from '@/components/ui/TabBarBackground';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import AntDesign from '@expo/vector-icons/AntDesign';
-
+import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -22,24 +22,34 @@ export default function TabLayout() {
         tabBarBackground: TabBarBackground,
         tabBarStyle: Platform.select({
           ios: {
-            // Use a transparent background on iOS to show the blur effect
-            position: 'absolute',
+            bottom: 20, 
           },
-          default: {},
+          default: {
+            bottom: 0, 
+            height: 53, // subir a navbar
+          },
         }),
       }}>
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Oque é',
-          tabBarIcon: ({ color }) =><AntDesign name="exclamationcircle" size={24} color="." COLOR={color} />,
+          title: 'O que é',
+          tabBarIcon: ({ color }) => <AntDesign name="exclamationcircle" size={25} color={color} />,
         }}
       />
       <Tabs.Screen
         name="explore"
         options={{
-          title: 'INFORMAÇÃO',
-          tabBarIcon: ({ color }) =><AntDesign name="info" size={24} color="." colo={color} />,
+          title: 'Informação',
+          tabBarIcon: ({ color }) => <AntDesign name="info" size={30} color={color} />,
+        }}
+      />
+
+<Tabs.Screen
+        name="tratamento"
+        options={{
+          title: 'Tratamento',
+          tabBarIcon: ({ color }) => <FontAwesome6 name="user-doctor" size={24} color={color} />
         }}
       />
     </Tabs>
