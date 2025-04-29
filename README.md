@@ -4,7 +4,7 @@ Aplicativo móvel com informações sobre ansiedade, sintomas e tratamentos.
 
 ## Principais Recursos
 
-- Alternância entre tema claro e escuro
+- Alternância entre tema claro e escuro (agora é um íconezinho)
 - Informações sobre tipos de ansiedade
 - Lista de sintomas físicos
 - Botão com link para mais informações
