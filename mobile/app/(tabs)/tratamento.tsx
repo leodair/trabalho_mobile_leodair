@@ -29,6 +29,14 @@ export default function HomeScreen() {
         A ansiedade é uma resposta natural do corpo a situações de estresse ou perigo...
       </ThemedText>
 
+      <ThemedView style={styles.titleContainer}>
+        <ThemedText type="title">Como pode pedir ajuda</ThemedText>
+      </ThemedView>
+
+      <ThemedText>
+      Quando alguém está enfrentando episódios de ansiedade, é importante buscar ajuda para lidar com a situação de maneira adequada. A pessoa pode procurar apoio em diversos lugares, como psicólogos e psiquiatras, que são profissionais especializados em tratar questões emocionais. Também é possível buscar apoio em grupos de apoio ou em clínicas de saúde mental. Além disso, a conversa com amigos e familiares pode ser reconfortante, pois o apoio social é fundamental. Em casos mais urgentes, pode-se procurar a ajuda de serviços de emergência, como hospitais ou centros de atendimento psicológico, que podem oferecer o suporte necessário para enfrentar a crise de ansiedade. O importante é lembrar que pedir ajuda é um passo fundamental para o bem-estar e recuperação.
+      </ThemedText>
+
       <ThemedView style={styles.buttonContainer}>
         <TouchableOpacity style={styles.customButton} onPress={handleButtonPress}>
           <Text style={styles.buttonText}>Clique aqui para saber mais</Text>
