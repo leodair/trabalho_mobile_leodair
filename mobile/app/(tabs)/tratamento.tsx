@@ -1,5 +1,6 @@
-import { Image, StyleSheet, Platform, TouchableOpacity, Text, Linking, SafeAreaView, ScrollView, Button, View } from 'react-native';
+import { Image, StyleSheet, Platform, TouchableOpacity, Text, Linking, SafeAreaView, ScrollView, View } from 'react-native';
 import { useState } from 'react';
+import Ionicons from '@expo/vector-icons/Ionicons';
 
 export default function HomeScreen() {
   const [theme, setTheme] = useState('light');
@@ -12,6 +13,7 @@ export default function HomeScreen() {
   const textStyle = theme === 'light' ? styles.lightText : styles.darkText;
   const headerBackgroundColor = theme === 'light' ? '#A1CEDC' : '#2345';
   const buttonColor = theme === 'light' ? '#007AFF' : '#1a73e8';
+  const iconColor = theme === 'light' ? '#000' : '#fff';
 
   const handleButtonPress = () => {
     Linking.openURL('https://www.minhavida.com.br/saude/temas/ansiedade');
@@ -27,10 +29,13 @@ export default function HomeScreen() {
             style={styles.headerImage}
           />
           <View style={styles.themeButtonContainer}>
-            <Button 
-              title={`Modo ${theme === 'light' ? 'Escuro' : 'Claro'}`} 
-              onPress={toggleTheme} 
-            />
+            <TouchableOpacity onPress={toggleTheme}>
+              <Ionicons
+                name={theme === 'light' ? 'moon-outline' : 'sunny-outline'}
+                size={30}
+                color='black'
+              />
+            </TouchableOpacity>
           </View>
         </View>
 
@@ -137,8 +142,7 @@ const styles = StyleSheet.create({
     top: 10,
     right: 10,
     zIndex: 1,
-    backgroundColor: 'rgba(255,255,255,0.7)',
-    borderRadius: 5,
-    padding: 2,
+    borderRadius: 20,
+    padding: 5,
   },
 });

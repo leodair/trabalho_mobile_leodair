@@ -1,9 +1,10 @@
-import { Image, StyleSheet, Platform, Button, View, SafeAreaView, ScrollView } from 'react-native';
+import { Image, StyleSheet, Platform, TouchableOpacity, View, SafeAreaView, ScrollView } from 'react-native';
 import { useState } from 'react';
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import Ionicons from '@expo/vector-icons/Ionicons';
 
 export default function HomeScreen() {
   const [theme, setTheme] = useState('light');
@@ -16,6 +17,7 @@ export default function HomeScreen() {
   const containerStyle = theme === 'light' ? styles.lightContainer : styles.darkContainer;
   const textStyle = theme === 'light' ? styles.lightText : styles.darkText;
   const headerBackgroundColor = theme === 'light' ? '#A1CEDC' : '#2345';
+  const iconColor = theme === 'light' ? '#000' : '#fff';
 
   return (
     <SafeAreaView style={containerStyle}>
@@ -27,10 +29,13 @@ export default function HomeScreen() {
             style={styles.headerImage}
           />
           <View style={styles.buttonContainer}>
-            <Button 
-              title={`Modo ${theme === 'light' ? 'Escuro' : 'Claro'}`} 
-              onPress={toggleTheme} 
-            />
+            <TouchableOpacity onPress={toggleTheme}>
+              <Ionicons
+                name={theme === 'light' ? 'moon-outline' : 'sunny-outline'}
+                size={30}
+                color='white'
+              />
+            </TouchableOpacity>
           </View>
         </View>
 
@@ -43,13 +48,13 @@ export default function HomeScreen() {
           </ThemedText>
 
           <ThemedText type="subtitle" style={[styles.subtitle, textStyle]}>O que é Ansiedade</ThemedText>
-          
+
           <ThemedText style={[styles.textContent, textStyle]}>
             No entanto, quando a ansiedade se torna excessiva ou persistente, pode interferir nas atividades diárias e se transformar em um transtorno de ansiedade, que pode exigir atenção e tratamento. Se você ou alguém que você conhece está enfrentando dificuldades com a ansiedade, é sempre bom buscar apoio profissional.
           </ThemedText>
 
           <ThemedText type="subtitle" style={[styles.subtitle, textStyle]}>TIPOS DE ANSIEDADE</ThemedText>
-          
+
           <ThemedText style={[styles.textContent, textStyle]}>
             • Transtorno de Ansiedade Generalizada (TAG): Caracterizado por preocupação excessiva e estresse
           </ThemedText>
@@ -74,7 +79,6 @@ export default function HomeScreen() {
   );
 }
 
-// Estilos idênticos ao primeiro código
 const styles = StyleSheet.create({
   lightContainer: {
     flex: 1,
@@ -125,8 +129,7 @@ const styles = StyleSheet.create({
     top: 10,
     right: 10,
     zIndex: 1,
-    backgroundColor: 'rgba(255,255,255,0.7)',
-    borderRadius: 5,
-    padding: 2,
+    borderRadius: 20,
+    padding: 5,
   },
 });

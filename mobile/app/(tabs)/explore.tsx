@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Text, Image, Button, SafeAreaView, ScrollView } from 'react-native';
+import { StyleSheet, View, Text, Image, TouchableOpacity, SafeAreaView, ScrollView } from 'react-native';
+import Ionicons from '@expo/vector-icons/Ionicons';
 
 export default function TabTwoScreen() {
- 
   const [theme, setTheme] = useState('light'); 
 
   const toggleTheme = () => {
@@ -12,6 +12,7 @@ export default function TabTwoScreen() {
   const containerStyle = theme === 'light' ? styles.lightContainer : styles.darkContainer;
   const textStyle = theme === 'light' ? styles.lightText : styles.darkText;
   const headerBackgroundColor = theme === 'light' ? '#A1CEDC' : '#2345'; 
+  const iconColor = theme === 'light' ? '#000' : '#fff';
 
   return (
     <SafeAreaView style={containerStyle}>
@@ -19,7 +20,13 @@ export default function TabTwoScreen() {
         <View style={[styles.header, { backgroundColor: headerBackgroundColor }]}>
           <Image source={require('@/assets/images/19.jpg')} style={styles.headerImage} />
           <View style={styles.buttonContainer}>
-            <Button title={`Modo ${theme === 'light' ? 'Escuro' : 'Claro'}`} onPress={toggleTheme} />
+            <TouchableOpacity onPress={toggleTheme}>
+              <Ionicons
+                name={theme === 'light' ? 'moon-outline' : 'sunny-outline'}
+                size={30}
+                color='white'
+              />
+            </TouchableOpacity>
           </View>
         </View>
 
@@ -72,7 +79,7 @@ const styles = StyleSheet.create({
     width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
-    position: 'relative', // Adicionado para o posicionamento absoluto do botão
+    position: 'relative',
   },
   headerImage: {
     height: 250,
@@ -92,9 +99,11 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   buttonContainer: {
-    position: 'absolute', // Para posicionar o botão
-    top: 10, // Distância do topo
-    right: 10, // Distância da direita
-    zIndex: 1, // Para garantir que o botão fique acima de outros elementos
+    position: 'absolute',
+    top: 10,
+    right: 10,
+    zIndex: 1,
+    borderRadius: 20,
+    padding: 5,
   },
-})
+});
